@@ -96,7 +96,7 @@ function FirstPage() {
               </div>
               <div className="flex justify-center">
                 <Link to="/PdfCreator">
-                  <button className="text-2xl font-bold font-[shabnam] px-4 py-1 bg-white text-black rounded-full">
+                  <button className="text-2xl font-bold font-[shabnam] px-4 py-1 bg-black text-white rounded-full italic">
                     پرینت جزئیات
                   </button>
                 </Link>
@@ -109,13 +109,11 @@ function FirstPage() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label className="font-bold italic text-lg">Name: </label>
-              {/* use validate option to pass custom validation function */}
               <input
                 placeholder="write your name here:"
                 className="border border-black rounded-full p-2 py-1 bg-gray-100 font-bold    "
                 {...register("name", { validate: validateName })}
               />
-              {/* display error message from validation function */}
               {errors.name && (
                 <p className="text-red-400 font-bold italic text-sm">
                   {errors.name.message}
@@ -141,14 +139,12 @@ function FirstPage() {
 
             <div className="mb-3">
               <label className="font-bold italic text-lg">Age: </label>
-              {/* use validate option to pass custom validation function */}
               <input
                 placeholder="select your age:"
                 className="border border-black rounded-full p-2 py-1 bg-gray-100 font-bold"
                 type="number"
                 {...register("age", { validate: validateAge })}
               />
-              {/* display error message from validation function */}
               {errors.age && (
                 <p className="text-red-400 font-bold italic text-sm">
                   {errors.age.message}

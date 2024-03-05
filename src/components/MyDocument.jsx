@@ -2,7 +2,7 @@ import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 import { useEffect, useState } from "react";
 const styles = StyleSheet.create({
   page: {
-    border: "5px outset red",
+    border: "3px dashed black",
     flexDirection: "column",
     backgroundColor: "#F0F0F0",
   },
@@ -11,10 +11,20 @@ const styles = StyleSheet.create({
     padding: 10,
     fontWeight: "bold",
   },
+  title: {
+    fontSize: "24",
+    fontWeight: "extrabold",
+    color: "red",
+  },
   text: {
-    fontSize: 16,
-    fontWeight: "bold",
+    fontSize: "18",
+    fontWeight: "normal",
     color: "blue",
+  },
+  subject: {
+    fontSize: "28",
+    fontWeight: "bold",
+    color: "black",
   },
 });
 const MyDocument = () => {
@@ -43,27 +53,32 @@ const MyDocument = () => {
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.container}>
-          <Text>new customer info: </Text>
+          <Text style={styles.subject}>new customer info: </Text>
         </View>
         {/* 1 */}
         <View style={styles.container}>
-          <Text style={styles.text}>customer name: {name}</Text>
+          <Text style={styles.title}>customer name: </Text>
+          <Text style={styles.text}>{name}</Text>
         </View>
         {/* 2 */}
         <View style={styles.container}>
-          <Text style={styles.text}>customer last name: {lastname}</Text>
+          <Text style={styles.title}>customer last name:</Text>
+          <Text style={styles.text}>{lastname}</Text>
         </View>
         {/* 3 */}
         <View style={styles.container}>
-          <Text style={styles.text}>customer age: {age}</Text>
+          <Text style={styles.title}>customer age: </Text>
+          <Text style={styles.text}>{age}</Text>
         </View>
         {/* 4 */}
         <View style={styles.container}>
-          <Text style={styles.text}>customer date of sign: {date}</Text>
+          <Text style={styles.title}>customer date of sign:</Text>
+          <Text style={styles.text}>{date}</Text>
         </View>
         {/* 5 */}
         <View style={styles.container}>
-          <Text style={styles.text}>customer email: {email}</Text>
+          <Text style={styles.title}>customer email:</Text>
+          <Text style={styles.text}> {email}</Text>
         </View>
       </Page>
     </Document>

@@ -12,8 +12,16 @@ const Navbar = () => {
             width={50}
           />
         </div>
-        <div className="font-bold italic text-3xl w-[85%] text-white">
-          Website to PDF Converter
+        <div className="w-[85%]">
+          <div className="font-bold italic text-3xl text-white">
+            input to PDF Converter
+          </div>
+          <div className="font-bold italic text-xl text-gray-300">
+            for project course
+          </div>
+          <div className="font-bold italic text-md text-gray-300">
+            Arian Farzaneh nejad(winter 2024)
+          </div>
         </div>
         <div className="w-[10%] flex justify-center">
           <img src={IAUTSB_logo} alt="azad uni photo" height={40} width={40} />
